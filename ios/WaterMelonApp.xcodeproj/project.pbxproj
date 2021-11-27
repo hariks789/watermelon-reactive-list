@@ -14,6 +14,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A75D6632A7492E94D5F55B81 /* libPods-WaterMelonApp-WaterMelonAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB750FDF686A9FA24A2B5B58 /* libPods-WaterMelonApp-WaterMelonAppTests.a */; };
 		CE53F2CA1DBB73C55D663C03 /* libPods-WaterMelonApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 292EAB8AFB16C40593E4BECF /* libPods-WaterMelonApp.a */; };
+		DF9CA5F327520685005465E3 /* wmelon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9CA5F227520685005465E3 /* wmelon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		97BF63251D2454C5E232B263 /* Pods-WaterMelonApp-WaterMelonAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterMelonApp-WaterMelonAppTests.release.xcconfig"; path = "Target Support Files/Pods-WaterMelonApp-WaterMelonAppTests/Pods-WaterMelonApp-WaterMelonAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF5A70F3464AEF2C647E4A15 /* Pods-WaterMelonApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterMelonApp.debug.xcconfig"; path = "Target Support Files/Pods-WaterMelonApp/Pods-WaterMelonApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CB750FDF686A9FA24A2B5B58 /* libPods-WaterMelonApp-WaterMelonAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterMelonApp-WaterMelonAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9CA5F127520685005465E3 /* WaterMelonApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaterMelonApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF9CA5F227520685005465E3 /* wmelon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wmelon.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -92,6 +95,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				DF9CA5F227520685005465E3 /* wmelon.swift */,
+				DF9CA5F127520685005465E3 /* WaterMelonApp-Bridging-Header.h */,
 			);
 			name = WaterMelonApp;
 			sourceTree = "<group>";
@@ -145,7 +150,6 @@
 				496EEC51A0ADCFC7BAAD77A8 /* Pods-WaterMelonApp-WaterMelonAppTests.debug.xcconfig */,
 				97BF63251D2454C5E232B263 /* Pods-WaterMelonApp-WaterMelonAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -413,6 +417,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				DF9CA5F327520685005465E3 /* wmelon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496EEC51A0ADCFC7BAAD77A8 /* Pods-WaterMelonApp-WaterMelonAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 97BF63251D2454C5E232B263 /* Pods-WaterMelonApp-WaterMelonAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = WaterMelonAppTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WaterMelonApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "WaterMelonApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WaterMelonApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "WaterMelonApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
