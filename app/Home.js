@@ -7,17 +7,13 @@ import {useDatabase} from '@nozbe/watermelondb/hooks';
 
 const HomeScreen = ({ticketsObserved}) => {
   const database = useDatabase();
-  const [ticketsList, setTickets] = useState([]);
-
-  // console.log('ticket', ticket);
 
   useEffect(() => {
-    async function fetchData() {
-      const ticketCollection = database.get('tickets');
-      const allTickets = await ticketCollection.query().fetch();
-      setTickets(allTickets);
-    }
-    fetchData();
+    // async function fetchData() {
+    //   const ticketCollection = database.get('tickets');
+    //   const allTickets = await ticketCollection.query().fetch();
+    // }
+    // fetchData();
   }, []);
 
   const handleCreateTicket = async () => {
@@ -25,7 +21,7 @@ const HomeScreen = ({ticketsObserved}) => {
       await database.get('tickets').create(ticket => {
         ticket.name = `New Ticket ${Math.random()}`;
         ticket.number = `${Math.random()}`;
-        ticket.remark = 'Halallaall';
+        ticket.remark = 'No remarks';
       });
     });
   };
